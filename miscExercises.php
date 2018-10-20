@@ -29,4 +29,13 @@ function countWords($str) {
 	var_dump($wordsCounted);
 }
 
-countWords( 'This is a string of words, it contains some words and it is a string');
+countWords($_GET['stringInput']);
+?>
+<form method="get" action="">
+	<label for="stringInput">Enter a string:</label>
+	<input name="stringInput" type="text"/>
+	<input name="submit" type="submit"/>
+</form>
+
+<?php
+
