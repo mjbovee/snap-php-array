@@ -19,5 +19,6 @@ for($i = 0; $i < sizeof($georgeArray); $i++) {
 	$arrayValue[$i] *= $arrayValue[$i];
 	array_push($newArray, $arrayValue[$i]);
 }
+
 var_dump($newArray);
 
