@@ -26,10 +26,25 @@ echo "<br/>";
 function countWords($str) {
 	$words = preg_split('/[\s,]+/', $str);
 	$wordsCounted = (array_count_values($words));
-	var_dump($wordsCounted);
+	return $wordsCounted;
+}
+$makeTable = countWords($_GET['stringInput']);
+
+function htmlTable($tbl){
+	array_multisort($tbl, SORT_DESC);
+	echo "<table>";
+	foreach ($tbl as $key=>$value) {
+		echo "<tr>";
+			echo "<td>" . $key . "</td>";
+			echo "<td>" . $value . "</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
+
 }
 
-countWords($_GET['stringInput']);
+echo htmlTable($makeTable);
+
 ?>
 <form method="get" action="">
 	<label for="stringInput">Enter a string:</label>
@@ -37,5 +52,5 @@ countWords($_GET['stringInput']);
 	<input name="submit" type="submit"/>
 </form>
 
-<?php
+
 
