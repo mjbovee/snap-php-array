@@ -52,5 +52,45 @@ echo htmlTable($makeTable);
 	<input name="submit" type="submit"/>
 </form>
 
+<?php
+// more practice
 
+$thisMonth = date('F', time());
+if($thisMonth == 'December' || $thisMonth == 'January' || $thisMonth == "February") {
+	echo "It's " . $thisMonth . " which means it's winter.";
+} elseif($thisMonth == 'March' || $thisMonth == 'April' || $thisMonth == 'May') {
+	echo "It's " . $thisMonth . " which means it's spring.";
+} elseif($thisMonth == 'June' || $thisMonth == 'July' || $thisMonth == 'August') {
+	echo "It's " . $thisMonth . " which means it's summer.";
+} elseif($thisMonth == 'September' || $thisMonth == 'October' || $thisMonth == 'November') {
+	echo "It's " . $thisMonth . " which means it's fall.";
+} else {
+	echo "I don't know what month it is!";
+}
 
+$i = 0;
+echo "<p>\n";
+	while($i++ < 10) {
+		echo "abc ";
+	}
+echo "</p>\n";
+
+$i = 0;
+echo "<p>\n";
+	do {
+		echo "xyz ";
+		$i++;
+	} while ($i < 10 );
+echo "</p>\n";
+
+echo "<p>\n";
+	for ($i = 0; $i < 10; $i++) {
+		echo $i;
+}
+echo "</p>\n";
+
+echo "\n<ol>";
+	for ($letter = 'A'; $letter < 'G'; $letter++) {
+		echo "<li> Item " . $letter . "</li>\n";
+	}
+echo "\n</ol>";
