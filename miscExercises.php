@@ -94,3 +94,21 @@ echo "\n<ol>";
 		echo "<li> Item " . $letter . "</li>\n";
 	}
 echo "\n</ol>";
+
+echo "\n<ol>";
+	for ($i = 1; $i <= 12; $i++) {
+		$iSquared = $i * $i;
+		echo "<li>" . $i . " * " . $i . " = " . $iSquared . "</li>";
+	}
+echo "\n</ol>";
+
+echo "<table>\n";
+	for ($row = 1; $row <= 12; $row++) {
+		echo "<tr>\n";
+			for ($col = 1; $col <= 12; $col++) {
+				$tableData = $row * $col;
+				echo "<td> $tableData </td>\n";
+			}
+		echo "</tr>";
+	}
+echo "</table>";
